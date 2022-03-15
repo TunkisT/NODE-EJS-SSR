@@ -21,15 +21,19 @@ app.use(express.json());
 app.get('/', (req, res) => {
   // const kelias = path.join(__dirname, 'views', 'index.html');
   // res.sendFile(kelias);
-
-  res.render('index');
+  const data = {
+    title: 'Homepage 1',
+    age: 25,
+  };
+  res.render('index', data);
 });
 
 app.get('/about', (req, res) => {
-  // const keliasAbout = path.join(__dirname, 'views', 'about.html');
-  // res.sendFile(keliasAbout);
-
-  res.render('about');
+  const data = {
+    title: 'About us',
+    tech: ['HTML', 'CSS', 'JS', 'Node'],
+  };
+  res.render('about', data);
 });
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EJS</title>
+    <title>EJS | <%= title %> </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"></head>
 
 </head>
@@ -14,6 +14,12 @@
         <a href="/about" class="nav-link">ABOUT</a>
     </nav>
     <h1>This is about page</h1>
+    <h2>Web tech</h2>
+    <ul>
+        <% tech.forEach(el => { %> 
+        <li><%= el %> </li>
+        <% }) %> 
+    </ul>
     
 </body>
 </html>
