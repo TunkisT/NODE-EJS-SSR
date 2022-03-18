@@ -1,0 +1,17 @@
+<%- include('partials/head.ejs') %> 
+<%- include('partials/nav.ejs') %> 
+    
+<h1>Our users</h1>
+<div class="grid">
+    <% users.forEach(userObj => { %>
+        <div class="card">
+            <h2><%= userObj.name %>  - <%= userObj.email %> </h2>
+            <p>user age is <%= userObj.age %></p>
+            <p>user is a  <%= userObj.gender === 'male' ? 'Man' : 'Woman' %></p>
+        </div>
+     
+    <% }) %>
+</div>
+
+    
+<%- include('partials/footer.ejs') %> 

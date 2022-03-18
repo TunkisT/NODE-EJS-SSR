@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const path = require('path');
+const userRoutes = require('./routes/userRoutes');
 
 // const mysql = require('mysql2/promise');
 // const dbConfig = require('./dbConfig');
@@ -20,6 +21,7 @@ app.use(express.static(staticPath));
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
+app.use('/', userRoutes);
 
 app.get('/', (req, res) => {
   // const kelias = path.join(__dirname, 'views', 'index.html');
